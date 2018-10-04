@@ -93,7 +93,6 @@ def main():
             model.save(epoch)
 
         if epoch % opt.eval_step == 0 and opt.stage!=1:
-            # mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, rerank_topk=100, top1=False)
             mAP = evaluator.evaluate(val_loader, dataset.val, dataset.val, top1=False)
             is_best = mAP > best_mAP
             best_mAP = max(mAP, best_mAP)
