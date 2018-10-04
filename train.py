@@ -21,6 +21,7 @@ def get_data(name, data_dir, height, width, batch_size, workers, pose_aug):
     root = osp.join(data_dir, name)
     dataset = datasets.create(name, root)
 
+    # use combined trainval set for training as default
     train_loader = DataLoader(
         Preprocessor(dataset.trainval, root=dataset.images_dir, with_pose=True, pose_root=dataset.poses_dir, 
                     pid_imgs=dataset.trainval_query, height=height, width=width, pose_aug=pose_aug),
@@ -55,11 +56,11 @@ def main():
                     torch.nn.DataParallel(model.net_E.module.base_model).cuda(),
                     model.net_E.module.embed_model,
                     embed_dist_fn=lambda x: F.softmax(Variable(x), dim=1).data[:, 0])
-    # if opt.stage!=1:
-    #     print('Test with baseline model:')
-    #     top1, mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, rerank_topk=100, dataset=opt.dataset)
-    #     message = '\n Test with baseline model:  mAP: {:5.1%}  top1: {:5.1%}\n'.format(mAP, top1)
-    #     visualizer.print_reid_results(message)
+    if opt.stage!=1:
+        print('Test with baseline model:')
+        top1, mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, rerank_topk=100, dataset=opt.dataset)
+        message = '\n Test with baseline model:  mAP: {:5.1%}  top1: {:5.1%}\n'.format(mAP, top1)
+        visualizer.print_reid_results(message)
 
     total_steps = 0
     best_mAP = 0
@@ -92,7 +93,8 @@ def main():
             model.save(epoch)
 
         if epoch % opt.eval_step == 0 and opt.stage!=1:
-            mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, rerank_topk=100, top1=False)
+            # mAP = evaluator.evaluate(test_loader, dataset.query, dataset.gallery, rerank_topk=100, top1=False)
+            mAP = evaluator.evaluate(val_loader, dataset.val, dataset.val, top1=False)
             is_best = mAP > best_mAP
             best_mAP = max(mAP, best_mAP)
             if is_best:
