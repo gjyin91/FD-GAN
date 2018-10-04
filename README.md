@@ -69,7 +69,7 @@ python train.py --display-port 6006 --display-id 1 \
 You can train it on specified GPUs by setting `CUDA_VISIBLE_DEVICES`. For main arguments,
 - `--display-port`: display port of [visdom](https://github.com/facebookresearch/visdom), e.g., you can visualize the results by `localhost:6006`.
 - `--display-id`: set `0` to disable [visdom](https://github.com/facebookresearch/visdom).
-- `--stage`: set 1 for Stage II, and set 2 for stage III.
+- `--stage`: set `1` for Stage II, and set `2` for stage III.
 - `--pose-aug`: choose from `[no|erase|gauss]` to make augmentations on pose maps.
 - `--smooth-label`: smooth the label of GANloss or not. 
 
