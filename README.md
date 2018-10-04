@@ -8,7 +8,7 @@
 Pytorch implementation for our NIPS 2018 work. With the proposed siamese structure, we are able to learn **identity-related** and **pose-unrelated** representations.
 
 ## Prerequisites
-- Python 3.5 or Python 3.6
+- Python 3
 - [Pytorch](https://pytorch.org/) (We run the code under version 0.3.1, maybe lower versions also work.)
 
 ## Getting Started
