@@ -3,6 +3,8 @@
 
 <p align="center"><img src='framework.jpg' width="600px"></p>
 
+[Yixiao Ge](mailto:yxge@link.cuhk.edu.hk)\*, [Zhuowan Li](mailto:lizhuowan14@gmail.com)\*, [Haiyu Zhao](mailto:zhaohaiyu@sensetime.com), [Guojun Yin](mailto:gjyin@mail.ustc.edu.cn), [Shuai Yi](mailto:yishuai@sensetime.com), [Xiaogang Wang](mailto:xgwang@ee.cuhk.edu.hk), and [Hongsheng Li](mailto:hsli@ee.cuhk.edu.hk)  
+Neural Information Processing Systems (**NIPS**), 2018 (* equal contribution)
 [[Paper]]() (coming soon)
 
 Pytorch implementation for our NIPS 2018 work. With the proposed siamese structure, we are able to learn **identity-related** and **pose-unrelated** representations.
@@ -103,10 +105,6 @@ And **test** `best_net_E.pth` by the same way as mentioned in [Stage I](#stageI)
 - generate specified images.
 
 ## Citation
-**FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification**  
-[Yixiao Ge](mailto:yxge@link.cuhk.edu.hk)\*, [Zhuowan Li](mailto:lizhuowan14@gmail.com)\*, [Haiyu Zhao](mailto:zhaohaiyu@sensetime.com), [Guojun Yin](mailto:gjyin@mail.ustc.edu.cn), [Shuai Yi](mailto:yishuai@sensetime.com), [Xiaogang Wang](mailto:xgwang@ee.cuhk.edu.hk), and [Hongsheng Li](mailto:hsli@ee.cuhk.edu.hk)  
-Neural Information Processing Systems (**NIPS**), 2018 (* equal contribution)
-
 Please cite our paper if you find the code useful for your research.
 ```
 coming soon
