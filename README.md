@@ -73,7 +73,7 @@ You can train it on specified GPUs by setting `CUDA_VISIBLE_DEVICES`. For main a
 - `--pose-aug`: choose from `[no|erase|gauss]` to make augmentations on pose maps.
 - `--smooth-label`: smooth the label of GANloss or not. 
 
-Other arguments can be viewed in [options.py]().
+Other arguments can be viewed in [options.py](https://github.com/yxgeee/FD-GAN/blob/master/fdgan/options.py).
 Also you can directly download the models for stage II,
 - [Market1501_stageII_model](https://drive.google.com/open?id=1kIBuPzz-Ig70dE3rU-5-kyo3nGJP01NS)
 - [DukeMTMC_stageII_model](https://drive.google.com/open?id=1dD1cbg2jo5qhPbkMbsRYACRcVMrm28-o)
