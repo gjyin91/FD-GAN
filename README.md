@@ -1,4 +1,4 @@
-![Python 3.5](https://img.shields.io/badge/python-3.5-green.svg) ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
+![Python 3](https://img.shields.io/badge/python-3-green.svg)
 # FD-GAN: Pose-guided Feature Distilling GAN for Robust Person Re-identification
 
 <p align="center"><img src='framework.jpg' width="600px"></p>
